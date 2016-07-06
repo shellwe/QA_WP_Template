@@ -45,6 +45,15 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'qa_wp_template' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+        <?php 
+        if ( is_user_logged_in() ) {
+            $current_user = wp_get_current_user();
+            printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
+        } else {
+            wp_login_form();
+        }
+?> 
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
