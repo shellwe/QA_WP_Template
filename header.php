@@ -21,11 +21,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'qa_wp_template' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+	<header id="masthead" class="site-header row" role="banner">
+		<div class="site-branding col-sm-8">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -39,20 +39,24 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'qa_wp_template' ); ?></button>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+            </nav><!-- #site-navigation -->
+        </div><!-- .site-branding -->
 
-        <?php 
-        if ( is_user_logged_in() ) {
-            $current_user = wp_get_current_user();
-            printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
-        } else {
-            wp_login_form();
-        }
-        ?> 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'qa_wp_template' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="col-sm-4">
+            <form class="login-form">
+                <?php
+                if ( is_user_logged_in() ) {
+                    $current_user = wp_get_current_user();
+                    printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
+                } else {
+                    wp_login_form();
+                }
+                ?>
+            </form>
+        </div>
 
 	</header><!-- #masthead -->
 
