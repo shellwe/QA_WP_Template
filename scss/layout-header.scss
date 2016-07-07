@@ -1,0 +1,22 @@
+.site-header{
+    background-color: #E0FFFF;
+    border-bottom: medium #20B2AA inset;
+    margin-bottom: 1rem;
+    .login-form{
+		margin-top: 1rem;
+		.login-username,.login-password{
+			text-align: right;
+			margin-bottom:0;
+			display: block;
+			label{
+				width:auto;
+			}
+		}
+		.login-remember,.login-submit{
+			float:right;
+			display: inline;
+			margin-bottom:0;
+			margin-right: 1rem;
+		}
+    }
+}

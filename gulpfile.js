@@ -17,9 +17,9 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src('sass/style.scss')
+    return gulp.src('scss/style.scss')
         .pipe(sass())
-        .pipe(gulp.dest('style.css'));
+        .pipe(gulp.dest(''));
 });
 
 // Concatenate & Minify JS
