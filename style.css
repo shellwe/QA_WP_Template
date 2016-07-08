@@ -5650,10 +5650,24 @@ object {
 .gallery-caption {
   display: block; }
 
+.site-footer {
+  color: #a01723; }
+
 .site-header {
-  background-color: #E0FFFF;
-  border-bottom: medium #20B2AA inset;
-  margin-bottom: 1rem; }
+  background-color: #a01723;
+  color: #FFF;
+  border-bottom: medium #ef1621 inset;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem; }
+  .site-header .site-title a {
+    color: #FFF; }
+  .site-header .menu {
+    margin-bottom: .5rem; }
+    .site-header .menu a {
+      color: #FFF;
+      font-weight: bold; }
+      .site-header .menu a:hover {
+        border-bottom: medium #FFF solid; }
   .site-header .login-form {
     margin-top: 1rem; }
     .site-header .login-form .login-username, .site-header .login-form .login-password {
@@ -5667,3 +5681,6 @@ object {
       display: inline;
       margin-bottom: 0;
       margin-right: 1rem; }
+
+.site-footer {
+  color: #a01723; }

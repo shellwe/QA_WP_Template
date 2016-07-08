@@ -1,7 +1,25 @@
 .site-header{
-    background-color: #E0FFFF;
-    border-bottom: medium #20B2AA inset;
+    background-color: $Assurity-Red;
+	color: $Assurity-White;
+    border-bottom: medium $Assurity-LR inset;
     margin-bottom: 1rem;
+	padding-bottom: .5rem;
+	.site-title{
+		a{
+		color: $Assurity-White;
+		//-webkit-text-stroke: 1px $Assurity-LR;
+		}
+	}
+	.menu{
+		a{
+			color: $Assurity-White;
+			font-weight: bold;
+			&:hover{
+				border-bottom: medium $Assurity-White solid;
+			}
+		}
+		margin-bottom: .5rem;
+	}
     .login-form{
 		margin-top: 1rem;
 		.login-username,.login-password{
