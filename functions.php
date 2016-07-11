@@ -7,6 +7,25 @@
  * @package QA_WP_Template
  */
 
+/**
+ * Start --- My PHP code
+ */
+
+function custom_redirect_fuction()
+{
+    global $redirect_to;
+   if (!isset($_GET['redirect_to']))
+   {
+      $redirect_to = get_option('siteurl');
+    }
+}
+add_action('login_form', 'custom_redirect_fuction');
+
+/**
+ * End --- My PHP code
+ */
+
+
 if ( ! function_exists( 'qa_wp_template_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
