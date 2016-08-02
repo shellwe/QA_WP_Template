@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-					<p>So yea, this is the site</p>
+					<p><?php bloginfo( 'name' ); ?></p>
                 </div>
             </div>
         </div>

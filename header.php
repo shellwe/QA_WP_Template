@@ -48,7 +48,7 @@
                         <?php
                         if ( is_user_logged_in() ) {
                             $current_user = wp_get_current_user();
-                            printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
+                            printf( 'Hello %s!', esc_html( $current_user->user_firstname ) );
                         } else {
                             wp_login_form();
 							//wp_loginout();
