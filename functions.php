@@ -21,6 +21,9 @@ function custom_redirect_fuction()
 }
 add_action('login_form', 'custom_redirect_fuction');
 
+//This is a not smart work around as it ignores security but until I find out where the SSL Cert is I gotta use this
+// https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting#php-56-certificate-verification-failure
+
 /**
  * End --- My PHP code
  */

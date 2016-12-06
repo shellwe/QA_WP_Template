@@ -29,7 +29,7 @@
 	<header id="masthead" class="container-fluid site-header" role="banner">
         <div class="container">
             <div class="row">
-                <div class="site-branding col-sm-8">
+                <div class="site-branding col-md-4">
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
                     <?php $description = get_bloginfo( 'description', 'display' );
@@ -37,25 +37,14 @@
                         <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
                     <?php
                     endif; ?>
+                </div><!-- .site-branding -->
+
+                <div class="col-md-8">
                     <nav id="site-navigation" class="main-navigation row" role="navigation">
                         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'qa_wp_template' ); ?></button>
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
                     </nav><!-- #site-navigation -->
-                </div><!-- .site-branding -->
-
-                <div class="col-sm-4">
-                    <form class="login-form">
-                        <?php
-                        if ( is_user_logged_in() ) {
-                            $current_user = wp_get_current_user();
-                            printf( 'Hello %s!', esc_html( $current_user->user_firstname ) );
-                        } else {
-                            wp_login_form();
-							//wp_loginout();
-                        }
-                        ?>
-                    </form>
-                </div>
+				</div>
             </div>
         </div>
 

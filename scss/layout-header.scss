@@ -12,32 +12,24 @@
 	}
 	.menu{
 		height: 2rem;
-		a{
-			color: $Assurity-White;
-			font-weight: bold;
-			font-size: 1.5rem;
-			margin-right: 1rem;
-			&:hover{
+		padding-top: 1rem;
+		li{
+			.current_page_item{
 				border-bottom: medium $Assurity-White solid;
 			}
-		}
-		margin-bottom: .5rem;
-	}
-    .login-form{
-		margin-top: 1rem;
-		.login-username,.login-password{
-			text-align: right;
-			margin-bottom:0;
-			display: block;
-			label{
-				width:auto;
+			&:hover{
+				border-bottom: medium $Assurity-White solid;
+				border-top: medium $Assurity-White solid;
 			}
-		}
-		.login-remember,.login-submit{
-			float:right;
-			display: inline;
-			margin-bottom:0;
+
 			margin-right: 1rem;
+			a{
+				color: $Assurity-White;
+				font-weight: bold;
+				font-size: 1.5rem;
+				margin-right: 1rem;
+			}
+			margin-bottom: .5rem;
 		}
-    }
+	}
 }

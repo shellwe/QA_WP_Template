@@ -47,7 +47,7 @@ gulp.task('uglify', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/source', ['lint', 'concat']);
+    //gulp.watch('js/source', ['lint', 'concat']);
     gulp.watch('scss/*.scss', ['sass']);
 });
 

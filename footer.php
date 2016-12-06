@@ -16,8 +16,27 @@
 	<footer id="colophon" class="container-fluid site-footer" role="contentinfo">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-					<p><?php bloginfo( 'name' ); ?></p>
+                <div class="col-sm-6 col-md-8">
+					<p>copyright <?php bloginfo( 'name' ); ?><br/ >
+						If you have any questions please contact the <a href='mailto:<?php get_option( 'admin_email' ); ?>'>admin here</a>.</p>
+                </div>
+                <div class="col-sm-6 col-md-4">
+					<?php
+					if ( is_user_logged_in() ) {
+						$current_user = wp_get_current_user();
+						printf( 'Hello %s', esc_html( $current_user->user_firstname ) );
+						printf( ' %s!', esc_html( $current_user->user_lastname ) );
+						?>
+						<br />Click <a href="<?php echo wp_logout_url( home_url() ); ?>">here to log out</a>.
+						<?php
+
+					} else {
+						?>
+						You are currently not logged in;<br>Please <a href="<?php echo wp_login_url( home_url() ); ?>" title="Login">click here to log in</a>
+						<?php
+						//wp_loginout();
+					}
+					?>
                 </div>
             </div>
         </div>
