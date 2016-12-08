@@ -4995,10 +4995,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
-ul,
-ol {
-  margin: 0 0 1.5em 3em; }
-
 ul {
   list-style: disc; }
 
@@ -5425,8 +5421,10 @@ object {
   display: block; }
 
 *, *:before, *:after {
-  font-family: "myriad-pro",sans-serif;
   box-sizing: border-box; }
+
+*:not(.mce-toolbar-grp) {
+  font-family: "myriad-pro",sans-serif; }
 
 .site-header {
   background-color: #a01723;
@@ -5440,18 +5438,21 @@ object {
     height: 2rem;
     padding-top: 1rem; }
     .site-header .menu li {
+      border-bottom: medium #a01723 solid;
+      border-top: medium #a01723 solid;
       margin-right: 1rem;
-      margin-bottom: .5rem; }
+      margin-bottom: .1rem; }
+      .site-header .menu li:hover {
+        border-bottom: medium #FFF solid;
+        border-top: medium #FFF solid; }
       .site-header .menu li a {
         color: #FFF;
         font-weight: bold;
         font-size: 1.5rem;
         margin-right: 1rem; }
-        .site-header .menu li a .current_page_item {
-          border-bottom: medium #FFF solid; }
-        .site-header .menu li a:hover {
-          border-bottom: medium #FFF solid;
-          border-top: medium #FFF solid; }
+    .site-header .menu li.current-menu-item {
+      border-bottom: medium #FFF solid;
+      border-top: medium #a01723 solid; }
 
 .site-footer {
   color: #a01723; }

@@ -13,10 +13,11 @@
 	.menu{
 		height: 2rem;
 		padding-top: 1rem;
+
 		li{
-			.current_page_item{
-				border-bottom: medium $Assurity-White solid;
-			}
+			border-bottom: medium $Assurity-Red solid;
+			border-top: medium $Assurity-Red solid;
+
 			&:hover{
 				border-bottom: medium $Assurity-White solid;
 				border-top: medium $Assurity-White solid;
@@ -29,7 +30,12 @@
 				font-size: 1.5rem;
 				margin-right: 1rem;
 			}
-			margin-bottom: .5rem;
+			margin-bottom: .1rem;
 		}
+		li.current-menu-item{
+			border-bottom: medium $Assurity-White solid;
+			border-top: medium $Assurity-Red solid;
+		}
+		
 	}
 }
